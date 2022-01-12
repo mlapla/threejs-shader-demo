@@ -1,0 +1,410 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"iri",
+				"iridescentNormalMap"
+			],
+			[
+				"irides",
+				"iridescentNormalMap"
+			],
+			[
+				"mater",
+				"materialSpecularColor"
+			],
+			[
+				"mate",
+				"materialDiffuseColor"
+			],
+			[
+				"materia",
+				"materialDiffuseColor"
+			],
+			[
+				"tex",
+				"textureNumberMask"
+			],
+			[
+				"texture",
+				"textureNumberMask"
+			],
+			[
+				"materi",
+				"materialDiffuseColor"
+			],
+			[
+				"material",
+				"materialAmbientColor"
+			],
+			[
+				"ambient",
+				"ambientShading"
+			],
+			[
+				"l_",
+				"l_color"
+			],
+			[
+				"mul",
+				"multiplyScalar"
+			],
+			[
+				"VEC",
+				"Vector2"
+			],
+			[
+				"create",
+				"createMaterials"
+			],
+			[
+				"Loadin",
+				"LoadingManager"
+			],
+			[
+				"Plan",
+				"PlaneGeometry"
+			],
+			[
+				"inn",
+				"innerHeight"
+			],
+			[
+				"inner",
+				"innerHeight"
+			],
+			[
+				"Vec",
+				"Vector3"
+			],
+			[
+				"update",
+				"updateProjectionMatrix"
+			],
+			[
+				"handLeft",
+				"handLeftMatrix0"
+			],
+			[
+				"shinRight",
+				"shinRightMatrixWorld0"
+			],
+			[
+				"build",
+				"buildShaderBoneMatrix"
+			],
+			[
+				"skin",
+				"skinWeight"
+			],
+			[
+				"po",
+				"pose1"
+			],
+			[
+				"spineMat",
+				"spineMatrix0"
+			],
+			[
+				"forearm",
+				"forearmLeft"
+			],
+			[
+				"armLeft",
+				"armLeftRotation"
+			],
+			[
+				"cola",
+				"colladaTransform"
+			],
+			[
+				"shinLeft",
+				"shinLeftTranslation"
+			],
+			[
+				"shinlef",
+				"shinLeftRotation"
+			],
+			[
+				"shin",
+				"shinLength"
+			],
+			[
+				"coll",
+				"colladaTransform"
+			],
+			[
+				"right",
+				"legRightTranslation"
+			],
+			[
+				"foot",
+				"footWidth"
+			],
+			[
+				"legLeft",
+				"legLeftTranslation"
+			],
+			[
+				"fore",
+				"forearmRightTranslation"
+			],
+			[
+				"arm",
+				"armLength"
+			],
+			[
+				"forearmL",
+				"forearmLength"
+			],
+			[
+				"roT",
+				"rotX"
+			],
+			[
+				"armLef",
+				"armLeftRotation"
+			],
+			[
+				"chest",
+				"chestRadius"
+			],
+			[
+				"armRig",
+				"armRightTranslation"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"instal",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/home/mllp/Documents/webChaos",
+		"/home/mllp/Documents/webChaos/glsl"
+	],
+	"file_history":
+	[
+		"/home/mllp/Downloads/temp.py",
+		"/home/mllp/Documents/IFT3700/timer.py",
+		"/home/mllp/Documents/IFT3355/remise_tp3/TP3_2/glsl/iridescent.fs.glsl",
+		"/home/mllp/Documents/IFT3355/remise_tp3/TP3_2/glsl/iridescent.vs.glsl",
+		"/home/mllp/Documents/IFT3355/remise_tp3/TP3_2/Ball.js",
+		"/home/mllp/Documents/webChaos/glsl/fracBrownMotion.fs.glsl",
+		"/home/mllp/Documents/IFT3355/remise_tp3/TP3_2/glsl/phong.fs.glsl",
+		"/home/mllp/Documents/IFT3355/remise_tp3/TP3_1/glsl/gouraud.fs.glsl",
+		"/home/mllp/Documents/IFT3355/remise_tp3/TP3_1/glsl/gouraud.vs.glsl",
+		"/home/mllp/Documents/IFT3355/remise_tp3/TP3_1/glsl/blinnphong.fs.glsl",
+		"/home/mllp/Documents/IFT3355/remise_tp3/TP3_1/glsl/phong.fs.glsl",
+		"/home/mllp/Documents/IFT3355/remise_tp3/TP3_1/glsl/blinnphong.vs.glsl",
+		"/home/mllp/Documents/IFT3355/remise_tp3/TP3_1/glsl/phong.vs.glsl",
+		"/home/mllp/Documents/IFT3355/remise_tp3/TP3_2/Ball.html",
+		"/home/mllp/Documents/IFT3355/remise_tp3/TP3_2/glsl/Bal.html",
+		"/home/mllp/Documents/IFT3355/TP3/glsl/phong.vs.glsl",
+		"/home/mllp/Documents/IFT3355/TP3/glsl/blinnphong.vs.glsl",
+		"/home/mllp/Documents/IFT3355/TP3/glsl/phong.fs.glsl",
+		"/home/mllp/Documents/IFT3355/TP3/glsl/blinnphong.fs.glsl",
+		"/home/mllp/Documents/IFT3355/TP3/glsl/gouraud.vs.glsl",
+		"/home/mllp/Documents/IFT3355/TP3/glsl/gouraud.fs.glsl",
+		"/home/mllp/Documents/IFT3355/TP3/TP3_PhysicsUtils.js",
+		"/home/mllp/Documents/IFT3355/TP3/IFT3355_TP3_A2021.pdf",
+		"/home/mllp/Documents/IFT3355/TP3/TP3.js",
+		"/home/mllp/Documents/IFT3355/remise_tp1/Tp1_1/glsl/armadillo.vs.glsl",
+		"/home/mllp/Documents/IFT3355/TP3/.sublime-project",
+		"/home/mllp/Documents/webChaos/show.js",
+		"/home/mllp/Documents/webChaos/newtonDescent.js",
+		"/home/mllp/Documents/webChaos/glsl/newtonDescent.vs.glsl",
+		"/home/mllp/Documents/webChaos/glsl/vonoroi.fs.glsl",
+		"/home/mllp/Documents/webChaos/glsl/toonWater.fs.glsl",
+		"/home/mllp/Documents/IFT3911/IA.py",
+		"/home/mllp/Documents/webChaos/glsl/octograms.fs.glsl",
+		"/home/mllp/Documents/webChaos/glsl/default.vs.glsl",
+		"/home/mllp/Documents/webChaos/glsl/scrollingColor.fs.glsl",
+		"/home/mllp/Documents/webChaos/glsl/fracBrownMotion.vs.glsl",
+		"/home/mllp/Documents/webChaos/glsl/vonoroi.vs.glsl",
+		"/home/mllp/Documents/webChaos/glsl/scrollingColor.vs.glsl",
+		"/home/mllp/Documents/webChaos/show.html",
+		"/home/mllp/Documents/webChaos/glsl/white.vs.glsl",
+		"/home/mllp/Documents/webChaos/glsl/white.fs.glsl",
+		"/home/mllp/Documents/IFT3355/remise_tp2/TP2.js",
+		"/home/mllp/Documents/webChaos/jsm/libs/stats.module.js",
+		"/home/mllp/Documents/IFT3355/remise_tp1/Tp1_2/glsl/remote.vs.glsl",
+		"/home/mllp/Documents/IFT3355/remise_tp1/Tp1_1/TP1.html",
+		"/home/mllp/Documents/IFT3355/remise_tp1/Tp1_1/TP1.js",
+		"/home/mllp/Documents/webChaos/jsm/loaders/SourceLoader.js",
+		"/home/mllp/Documents/IFT3355/TP2-IFT3355-A21/TP2.js",
+		"/home/mllp/Documents/IFT3355/TP2-IFT3355-A21/TP2.html",
+		"/home/mllp/Documents/webChaos/gradientLargeStep.js",
+		"/home/mllp/Documents/IFT3355/TP2-IFT3355-A21/glsl/human.vs.glsl",
+		"/home/mllp/Documents/mlapla.github.io/src/components/AppBar.vue"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"circle_cluster",
+			"circle_ax",
+			"kmedoids_",
+			"spot",
+			"color",
+			"light",
+			"pos"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": true,
+		"scrollbar_highlights": true,
+		"show_context": true,
+		"use_buffer2": true,
+		"use_gitignore": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 35.0
+	},
+	"input":
+	{
+		"height": 46.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "webChaos.sublime-project",
+	"replace":
+	{
+		"height": 66.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"~/Documents/IFT3355/TP4/ift3355_tp4.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 309.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 592.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 264.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
