@@ -1,4 +1,7 @@
-import * as THREE from './build/three.module.js';
+"use strict";
+
+// import * as THREE from './build/three.module.js';
+import * as THREE from 'three';
 import Stats from './jsm/libs/stats.module.js';
 
 THREE.Cache.enabled = true;
@@ -11,15 +14,21 @@ var f = function (x,y) { return (x/y) + (x-2)*x + (y + 1)*y }
 // Make a canvas for each algo
 // Render each algo
 
-let shaderFiles = [
-  ['glsl/default.vs.glsl','glsl/scrollingColor.fs.glsl'],
-  ['glsl/default.vs.glsl','glsl/vonoroi.fs.glsl'],
-  ['glsl/default.vs.glsl','glsl/fracBrownMotion.fs.glsl'],
-  ['glsl/default.vs.glsl','glsl/octograms.fs.glsl'],
-  ['glsl/default.vs.glsl','glsl/foggyVonoroi.fs.glsl'],
-];
+// let shaderFiles = [
+//   ['default.vs.glsl','webpack-glsl!./glsl/scrollingColor.fs.glsl'],
+//   ['./glsl/default.vs.glsl','./glsl/vonoroi.fs.glsl'],
+//   ['./glsl/default.vs.glsl','./glsl/fracBrownMotion.fs.glsl'],
+//   ['./glsl/default.vs.glsl','./glsl/octograms.fs.glsl'],
+//   ['./glsl/default.vs.glsl','./glsl/foggyVonoroi.fs.glsl'],
+// ];
 
-const nShaders = shaderFiles.length;
+const vertexShader = require('raw-loader!./default.vs.glsl');
+const shaderURLs = require.context('./glsl',false,/\.glsl$/);
+console.log(shaderURLs)
+shaderURLs = shaderURLs.keys().map(shaderURLs);
+console.log(shaderURLs)
+
+const nShaders = 6;
 const nRows = 2;
 const nColumns = 3;
 let tileWidth = window.innerWidth / nColumns;
@@ -41,9 +50,9 @@ function tileCenter(n){
 	return [x,y];
 }
 
-function init() {
-
-	const canvas = document.querySelector( '#container' );
+function init(canvas) {
+	if (canvas == undefined)
+		canvas = document.getElementById('container')
 
 	// Renderer
 	const renderer = new THREE.WebGLRenderer( { antialias: true } );
@@ -154,19 +163,22 @@ function loadShadersToMaterials(materials,loadingManager) {
 
     for( let i = 0; i < nShaders; i++)
     {
-    	// Load Vertex Shader
-	    shaderLoader.load(shaderFiles[i][0],
-	        function (data) {
-	    	    materials[i].vertexShader = data;
-	    	}
-    	);
+    	materials[i].vertexShader = vertexShader;
+    	// materials[i].fragmentShader = shaderURLs[i];
 
-    	// Load Fragment Shader
-	    shaderLoader.load(shaderFiles[i][1],
-	        function (data) {
-	    	    materials[i].fragmentShader = data;
-	    	}
-    	);
+    	// // Load Vertex Shader
+	    // shaderLoader.load(shaders[i][0],
+	    //     function (data) {
+	    // 	    materials[i].vertexShader = data;
+	    // 	}
+    	// );
+
+    	// // Load Fragment Shader
+	    // shaderLoader.load(shader[i][1],
+	    //     function (data) {
+	    // 	    materials[i].fragmentShader = data;
+	    // 	}
+    	// );
     }
 
 }
@@ -195,3 +207,5 @@ function createMeshes(materials, nRows, nColumns){
 
 
 window.addEventListener('load',init);
+
+export default init;
