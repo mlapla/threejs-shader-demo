@@ -1,0 +1,13 @@
+{
+  "name": "threejs-tiling-shaders",
+  "version": "1.0.0",
+  "description": "A simple Threejs program that tiles shaders.",
+  "private": true,
+  "devDependencies": {
+    "eslint": "^8.7.0",
+    "raw-loader": "^4.0.2"
+  },
+  "dependencies": {
+    "three": "^0.136.0"
+  }
+}
