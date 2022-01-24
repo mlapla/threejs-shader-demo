@@ -2,7 +2,7 @@ const path = require('path');
 
 module.exports = {
   entry: {
-    filename: './show.js'
+    filename: './threejs-tiling-shaders.js'
   },
   output: {
     filename: 'threejs-tiling-shaders.bundle.js',
