@@ -1,36 +1,36 @@
 "use strict";
 
-// import * as THREE from './build/three.module.js';
-import * as THREE from 'three';
+import * as THREE from './build/three.module.js';
+// import * as THREE from 'three';
 import Stats from './jsm/libs/stats.module.js';
 
 THREE.Cache.enabled = true;
-
-
-// Choose function
-var f = function (x,y) { return (x/y) + (x-2)*x + (y + 1)*y }
 
 // Import all algos
 // Make a canvas for each algo
 // Render each algo
 
-// let shaderFiles = [
-//   ['default.vs.glsl','webpack-glsl!./glsl/scrollingColor.fs.glsl'],
+let shaders = [
+//   ['./glsl/default.vs.glsl','./glsl/scrollingColor.fs.glsl'],
 //   ['./glsl/default.vs.glsl','./glsl/vonoroi.fs.glsl'],
 //   ['./glsl/default.vs.glsl','./glsl/fracBrownMotion.fs.glsl'],
 //   ['./glsl/default.vs.glsl','./glsl/octograms.fs.glsl'],
+  ['./glsl/default.vs.glsl','./glsl/nova.fs.glsl'],
 //   ['./glsl/default.vs.glsl','./glsl/foggyVonoroi.fs.glsl'],
-// ];
+  ['./glsl/default.vs.glsl','./glsl/newton.fs.glsl'],
+  ['./glsl/default.vs.glsl','./glsl/mandelbrot.fs.glsl'],
+  ['./glsl/default.vs.glsl','./glsl/julia.fs.glsl']
+];
 
-const vertexShader = require('raw-loader!./default.vs.glsl');
-const shaderURLs = require.context('./glsl',false,/\.glsl$/);
-console.log(shaderURLs)
-shaderURLs = shaderURLs.keys().map(shaderURLs);
-console.log(shaderURLs)
+// const vertexShader = require('raw-loader!./default.vs.glsl');
+// const shaderURLs = require.context('./glsl',false,/\.glsl$/);
+// console.log(shaderURLs)
+// shaderURLs = shaderURLs.keys().map(shaderURLs);
+// console.log(shaderURLs)
 
-const nShaders = 6;
+const nShaders = 4;
 const nRows = 2;
-const nColumns = 3;
+const nColumns = 2;
 let tileWidth = window.innerWidth / nColumns;
 let tileHeight = window.innerHeight / nRows; 
 
@@ -51,8 +51,10 @@ function tileCenter(n){
 }
 
 function init(canvas) {
-	if (canvas == undefined)
-		canvas = document.getElementById('container')
+
+	if (canvas == undefined){
+		canvas = document.getElementById("container")
+	}
 
 	// Renderer
 	const renderer = new THREE.WebGLRenderer( { antialias: true } );
@@ -67,10 +69,11 @@ function init(canvas) {
 	// Scene
 	const scene = new THREE.Scene();
 	const camera = new THREE.OrthographicCamera( - window.innerWidth / 2,
-																								 window.innerWidth / 2, 
-																								 window.innerHeight / 2, 
-																							 - window.innerHeight / 2, 
-																							 - 10, 10 );
+		window.innerWidth / 2, 
+		window.innerHeight / 2, 
+		-window.innerHeight / 2, 
+		-10, 10 
+	);
 	scene.add(camera)
 
 	// Grid of shaders
@@ -110,22 +113,19 @@ function init(canvas) {
 	}
 
 	function onMouseMove(){
-
 		materials.forEach( (m) => {
 			const mouse = [event.clientX ,	window.innerHeight - event.clientY]
 			m.uniforms.iMouse.value.set( mouse[0], mouse[1] );
 		});
- 
 	}
 
 	function onWindowResize(){
-
 		// Adjust Rendering resolution
 		renderer.setSize(window.innerWidth, window.innerHeight);
-    camera.aspect = window.innerWidth / window.innerHeight;
-    camera.updateProjectionMatrix();
+		camera.aspect = window.innerWidth / window.innerHeight;
+		camera.updateProjectionMatrix();
 
-    // Adjust grid of shaders resolution
+    	// Adjust grid of shaders resolution
 		materials.forEach( (m,i) => {
 			let offset = gridOffset(i)
 			m.uniforms.iOffset.value.set( offset[0], offset[1] );
@@ -160,25 +160,24 @@ function createMaterials(){
 function loadShadersToMaterials(materials,loadingManager) {
 
     const shaderLoader = new THREE.FileLoader(loadingManager);
-
     for( let i = 0; i < nShaders; i++)
     {
-    	materials[i].vertexShader = vertexShader;
+    	// materials[i].vertexShader = vertexShader;
     	// materials[i].fragmentShader = shaderURLs[i];
 
-    	// // Load Vertex Shader
-	    // shaderLoader.load(shaders[i][0],
-	    //     function (data) {
-	    // 	    materials[i].vertexShader = data;
-	    // 	}
-    	// );
+    	// Load Vertex Shader
+	    shaderLoader.load(shaders[i][0],
+	        function (data) {
+	    	    materials[i].vertexShader = data;
+	    	}
+    	);
 
-    	// // Load Fragment Shader
-	    // shaderLoader.load(shader[i][1],
-	    //     function (data) {
-	    // 	    materials[i].fragmentShader = data;
-	    // 	}
-    	// );
+    	// Load Fragment Shader
+	    shaderLoader.load(shaders[i][1],
+	        function (data) {
+	    	    materials[i].fragmentShader = data;
+	    	}
+    	);
     }
 
 }
@@ -206,6 +205,6 @@ function createMeshes(materials, nRows, nColumns){
 }
 
 
-window.addEventListener('load',init);
+window.addEventListener('load',()=>{init(document.getElementById("container"))});
 
 export default init;
