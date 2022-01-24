@@ -55,7 +55,7 @@ vec3 julia(in vec2 st, in vec2 mouse){
 
   // Display black circles at zeros
   if (distance(st, mouse) < 0.02)
-    return vec3(0.0);
+    return vec3(1.0);
 
 
   // Compute minimal distance
@@ -68,26 +68,11 @@ vec3 julia(in vec2 st, in vec2 mouse){
     z = cmul(z,z) + c;
   }
 
-//   float d1 = distance(z,zero1);
-//   float d2 = distance(z,zero2);
-//   float d3 = distance(z,zero3);
-
-//   if (d1 < d2 && d1 < d3)
-//   {
-//     return vec3(1.0,d1/d2,d1/d3);
-//   }
-//   else if (d2 < d3)
-//   {
-//     return vec3(d2/d1,1.0,d2/d3);
-//   }
-//   else {
-//     return vec3(d3/d1,d3/d2,1.0);
-//   }
   if (dot(z,z) > 4.0){
       return vec3(4.0/dot(z,z),normalize(z));
   }
   else{
-      return vec3(dot(z,z)/4.0,normalize(z));
+      return vec3(1.0);
   }
 }
 

@@ -15,10 +15,10 @@ let shaders = [
 //   ['./glsl/default.vs.glsl','./glsl/vonoroi.fs.glsl'],
 //   ['./glsl/default.vs.glsl','./glsl/fracBrownMotion.fs.glsl'],
 //   ['./glsl/default.vs.glsl','./glsl/octograms.fs.glsl'],
-  ['./glsl/default.vs.glsl','./glsl/nova.fs.glsl'],
+//   ['./glsl/default.vs.glsl','./glsl/nova.fs.glsl'],
 //   ['./glsl/default.vs.glsl','./glsl/foggyVonoroi.fs.glsl'],
-  ['./glsl/default.vs.glsl','./glsl/newton.fs.glsl'],
-  ['./glsl/default.vs.glsl','./glsl/mandelbrot.fs.glsl'],
+//   ['./glsl/default.vs.glsl','./glsl/newton.fs.glsl'],
+//   ['./glsl/default.vs.glsl','./glsl/mandelbrot.fs.glsl'],
   ['./glsl/default.vs.glsl','./glsl/julia.fs.glsl']
 ];
 
@@ -28,9 +28,9 @@ let shaders = [
 // shaderURLs = shaderURLs.keys().map(shaderURLs);
 // console.log(shaderURLs)
 
-const nShaders = 4;
-const nRows = 2;
-const nColumns = 2;
+const nShaders = 1;
+const nRows = 1;
+const nColumns = 1;
 let tileWidth = window.innerWidth / nColumns;
 let tileHeight = window.innerHeight / nRows; 
 
